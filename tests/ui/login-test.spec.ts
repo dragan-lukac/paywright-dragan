@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { HomePage } from "../../pages/home-page";
 
 test.describe("Login tests", () => {
-  test.only("Login with valid credentials", async ({ page }) => {
+  test("Login with valid credentials", async ({ page }) => {
     const homePage = new HomePage(page);
     homePage.navigateToHomePage();
     homePage.clickOnHeaderLoginButton();
@@ -11,7 +11,7 @@ test.describe("Login tests", () => {
     await expect(page.getByRole("link", { name: "Log out" })).toBeVisible();
   });
 
-  test.only("Login with invalid credentials", async ({ page }) => {
+  test("Login with invalid credentials", async ({ page }) => {
     const homePage = new HomePage(page);
     homePage.navigateToHomePage();
     homePage.clickOnHeaderLoginButton();
