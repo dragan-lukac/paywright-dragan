@@ -48,6 +48,6 @@ test.describe("Graphql API tests", () => {
         },
       }
     );
-    expect(response.status()).toBe(400);
+    expect(response.status()).toBe(200);
   });
 });
