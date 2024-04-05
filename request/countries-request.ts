@@ -1,14 +1,13 @@
-import { request } from "@playwright/test";
-
-
 export class CountriesRequest {
 
-  constructor() {
+  readonly request: any;
 
+  constructor(request: any) {
+    this.request = request;
   }
 
-  async getCountries(request) {
-    const response = await request.post(
+  async getCountries() {
+    const response = await this.request.post(
       "https://countries.trevorblades.com/graphql",
       {
         data: {
