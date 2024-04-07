@@ -28,14 +28,13 @@ export class HomePage {
         this.page.on('dialog', dialog => async dialog=>{
             await dialog.dismiss()
         });              
-
-        // await this.usernameField.focus();
-        // await this.usernameField.click();
-        // await this.usernameField.clear();
+        await this.usernameField.focus();
+        await this.usernameField.click();
+        await this.usernameField.clear();
         await this.usernameField.fill(username);
-        // await this.passwordField.focus();
-        // await this.passwordField.click();
-        // await this.passwordField.clear();
+        await this.passwordField.focus();
+        await this.passwordField.click();
+        await this.passwordField.clear();
         await this.passwordField.fill(password);
     }
 
